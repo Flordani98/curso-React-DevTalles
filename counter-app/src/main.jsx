@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+import './styles.css';
+import { CounterApp } from './CounterApp';
+
+ReactDOM.createRoot( document.getElementById('root')).render(
+    <React.StrictMode>
+        {/* <HelloWorldApp /> */}
+        {/* <FirstApp title /> si mando el prop de esta manera sin especificar lo que quiero mandar, se manda como un booleano(true)  */}
+        <CounterApp/>
+        {/* <FirstApp title ="SoyFlorencia" subTitle={123} /> */}
+    </React.StrictMode>
 )
